@@ -1,7 +1,5 @@
 .recipes-page {
-    padding-top: 220px;
-    /* Increased significantly to prevent overlap */
-    /* Increased to comfortably clear the fixed header */
+    padding-top: clamp(100px, 15vh, 180px);
     min-height: 100vh;
     background: linear-gradient(to bottom, var(--color-light), #fff);
     padding-bottom: var(--spacing-xl);
@@ -12,13 +10,12 @@
     margin-bottom: var(--spacing-lg);
     padding: 0 var(--spacing-md);
     max-width: 800px;
-    /* Limit width */
     margin-left: auto;
     margin-right: auto;
 }
 
 .recipes-header h1 {
-    font-size: 3.5rem;
+    font-size: clamp(2.2rem, 6vw, 3.5rem);
     background: linear-gradient(135deg, var(--color-primary), var(--color-masala));
     background-clip: text;
     -webkit-background-clip: text;
@@ -26,23 +23,20 @@
     margin-bottom: 0.5rem;
     line-height: 1.2;
     padding-bottom: 10px;
-    /* Prevent text clip */
 }
 
 .recipes-header p {
     color: var(--color-text-light);
-    font-size: 1.2rem;
+    font-size: clamp(1rem, 2.5vw, 1.2rem);
 }
 
 .recipes-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-    gap: 3rem;
-    /* Increased gap */
+    grid-template-columns: repeat(auto-fill, minmax(min(100%, 300px), 1fr));
+    gap: clamp(1.5rem, 4vw, 3rem);
     max-width: 1200px;
     margin: 0 auto;
-    padding: 0 3rem;
-    /* Explicit side padding */
+    padding: 0 var(--spacing-md);
 }
 
 .recipe-card {

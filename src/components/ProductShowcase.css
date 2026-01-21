@@ -1,5 +1,5 @@
 .product-showcase {
-    padding: var(--spacing-xl) var(--spacing-md);
+    padding: var(--spacing-lg) var(--spacing-md);
     background-color: white;
 }
 
@@ -9,20 +9,20 @@
 }
 
 .section-header h2 {
-    font-size: 2.5rem;
+    font-size: clamp(2rem, 5vw, 2.5rem);
     color: var(--color-dark);
     margin-bottom: var(--spacing-xs);
 }
 
 .section-header p {
     color: #888;
-    font-size: 1.2rem;
+    font-size: clamp(1rem, 2.5vw, 1.2rem);
 }
 
 .products-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: var(--spacing-lg);
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 280px), 1fr));
+    gap: var(--spacing-md);
     max-width: 1200px;
     margin: 0 auto;
 }

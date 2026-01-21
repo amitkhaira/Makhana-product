@@ -17,19 +17,21 @@ nav {
     align-items: center;
     max-width: 1200px;
     margin: 0 auto;
-    padding: 1rem 2rem;
+    padding: 0.8rem 1.5rem;
     background: var(--glass-bg);
     backdrop-filter: var(--glass-blur);
     -webkit-backdrop-filter: var(--glass-blur);
     border-radius: var(--radius-lg);
     border: var(--glass-border);
     box-shadow: var(--shadow-sm);
-    margin-top: var(--spacing-sm);
+    margin-top: 0.5rem;
+    width: 95%;
 }
 
 nav h1 {
-    font-size: 1.5rem;
+    font-size: clamp(1.2rem, 5vw, 1.5rem);
     font-weight: 800;
+    white-space: nowrap;
     background: linear-gradient(135deg, var(--color-primary), var(--color-primary-dark));
     background-clip: text;
     -webkit-background-clip: text;
@@ -39,25 +41,51 @@ nav h1 {
 
 nav ul {
     display: flex;
-    gap: 2rem;
+    gap: clamp(1rem, 3vw, 2rem);
     list-style: none;
+    align-items: center;
 }
 
 nav a {
     text-decoration: none;
     color: var(--color-text);
     font-weight: 600;
+    font-size: 0.95rem;
     font-family: var(--font-heading);
     position: relative;
     transition: color 0.3s ease;
+}
+
+@media (max-width: 600px) {
+    header {
+        padding: 0.5rem 0;
+    }
+
+    nav {
+        padding: 0.6rem 1rem;
+        width: 92%;
+    }
+
+    nav ul {
+        gap: 0.8rem;
+    }
+
+    nav a {
+        font-size: 0.85rem;
+    }
+
+    .nav-cart-btn {
+        padding: 0.4rem 0.8rem;
+        font-size: 0.85rem;
+    }
 }
 
 .nav-cart-btn {
     background: var(--color-primary);
     color: white;
     border: none;
-    padding: 0.5rem 1rem;
-    border-radius: 20px;
+    padding: 0.5rem 1.2rem;
+    border-radius: 30px;
     font-weight: 600;
     cursor: pointer;
     font-family: var(--font-heading);
@@ -65,23 +93,25 @@ nav a {
     display: flex;
     align-items: center;
     gap: 0.5rem;
-    transition: transform 0.2s;
+    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
 .nav-cart-btn:hover {
-    transform: scale(1.05);
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-neon);
 }
 
 .cart-badge {
     background: white;
     color: var(--color-primary);
-    width: 20px;
-    height: 20px;
-    border-radius: 50%;
+    min-width: 18px;
+    height: 18px;
+    padding: 0 4px;
+    border-radius: 10px;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 0.75rem;
+    font-size: 0.7rem;
     font-weight: 800;
 }
 
@@ -106,7 +136,7 @@ nav a:hover::after {
 
 footer {
     text-align: center;
-    padding: var(--spacing-lg) 0;
+    padding: var(--spacing-lg) var(--spacing-md);
     color: var(--color-text-light);
     background-color: var(--color-cream);
     border-top: 1px solid rgba(0, 0, 0, 0.05);
