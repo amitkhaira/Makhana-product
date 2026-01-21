@@ -31,7 +31,7 @@
 }
 
 .testimonials-header h2 {
-    font-size: 3rem;
+    font-size: clamp(2.2rem, 6vw, 3rem);
     background: linear-gradient(135deg, var(--color-primary), var(--color-masala));
     background-clip: text;
     -webkit-background-clip: text;
@@ -40,7 +40,7 @@
 }
 
 .testimonials-header p {
-    font-size: 1.2rem;
+    font-size: clamp(1rem, 2.5vw, 1.2rem);
     color: var(--color-text-light);
     max-width: 600px;
     margin: 0 auto;
