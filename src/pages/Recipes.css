@@ -1,0 +1,138 @@
+.recipes-page {
+    padding-top: 220px;
+    /* Increased significantly to prevent overlap */
+    /* Increased to comfortably clear the fixed header */
+    min-height: 100vh;
+    background: linear-gradient(to bottom, var(--color-light), #fff);
+    padding-bottom: var(--spacing-xl);
+}
+
+.recipes-header {
+    text-align: center;
+    margin-bottom: var(--spacing-lg);
+    padding: 0 var(--spacing-md);
+    max-width: 800px;
+    /* Limit width */
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.recipes-header h1 {
+    font-size: 3.5rem;
+    background: linear-gradient(135deg, var(--color-primary), var(--color-masala));
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 0.5rem;
+    line-height: 1.2;
+    padding-bottom: 10px;
+    /* Prevent text clip */
+}
+
+.recipes-header p {
+    color: var(--color-text-light);
+    font-size: 1.2rem;
+}
+
+.recipes-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 3rem;
+    /* Increased gap */
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 3rem;
+    /* Explicit side padding */
+}
+
+.recipe-card {
+    background: white;
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    box-shadow: var(--shadow-md);
+    transition: box-shadow 0.3s ease;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.recipe-card:hover {
+    box-shadow: var(--shadow-lg);
+}
+
+.recipe-image-container {
+    position: relative;
+    height: 200px;
+    overflow: hidden;
+}
+
+.recipe-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.recipe-card:hover .recipe-image {
+    transform: scale(1.1);
+}
+
+.recipe-overlay {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+}
+
+.recipe-time {
+    background: rgba(0, 0, 0, 0.7);
+    color: white;
+    padding: 0.25rem 0.75rem;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 600;
+}
+
+.recipe-content {
+    padding: 1.5rem;
+}
+
+.recipe-content h3 {
+    font-size: 1.25rem;
+    margin-bottom: 0.5rem;
+    color: var(--color-dark);
+}
+
+.recipe-content p {
+    color: var(--color-text-light);
+    font-size: 0.9rem;
+    margin-bottom: 1.5rem;
+    line-height: 1.6;
+}
+
+.recipe-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid #eee;
+    padding-top: 1rem;
+}
+
+.calories {
+    color: var(--color-primary);
+    font-weight: 700;
+    font-size: 0.9rem;
+}
+
+.read-more {
+    background: transparent;
+    color: var(--color-text);
+    border: 1px solid #ddd;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 600;
+}
+
+.read-more:hover {
+    background: var(--color-primary);
+    color: white;
+    border-color: var(--color-primary);
+}

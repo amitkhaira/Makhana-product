@@ -1,0 +1,85 @@
+.product-card {
+    background: white;
+    border-radius: 20px;
+    padding: 2rem;
+    box-shadow: var(--shadow-card);
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    transition: box-shadow 0.3s ease;
+    border-top: 5px solid var(--card-color);
+}
+
+.product-card:hover {
+    box-shadow: var(--shadow-pop);
+}
+
+.card-header img {
+    width: 200px;
+    height: auto;
+    margin-bottom: 1rem;
+    filter: drop-shadow(0 10px 15px rgba(0, 0, 0, 0.1));
+}
+
+.card-header h3 {
+    color: var(--card-color);
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.card-details {
+    width: 100%;
+    margin-top: 1rem;
+    overflow: hidden;
+}
+
+.card-details p {
+    font-size: 0.95rem;
+    color: #555;
+    margin-bottom: 1.5rem;
+}
+
+.nutrition-grid {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 1.5rem;
+    background: #f9f9f9;
+    padding: 1rem;
+    border-radius: 10px;
+}
+
+.nutrient {
+    display: flex;
+    flex-direction: column;
+}
+
+.nutrient span {
+    font-size: 0.8rem;
+    color: #888;
+    text-transform: uppercase;
+}
+
+.nutrient strong {
+    font-size: 1.1rem;
+    color: var(--color-dark);
+}
+
+.add-to-cart-btn {
+    background-color: var(--card-color);
+    color: white;
+    border: none;
+    padding: 0.8rem 2rem;
+    border-radius: 30px;
+    font-weight: 600;
+    width: 100%;
+}
+
+.tap-hint {
+    font-size: 0.8rem;
+    margin-top: 1rem;
+    color: #aaa;
+}
