@@ -32,7 +32,7 @@ const Header = () => {
 function App() {
   return (
     <CartProvider>
-      <Router>
+      <Router basename="/Makhana-product">
         <div className="app-container">
           <Header />
 
